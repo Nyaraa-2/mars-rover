@@ -5,9 +5,6 @@ class Rover {
   int posY;
   Direction direction;
   Rover({this.posX = 0, this.posY = 0, this.direction = Direction.north});
-  // Rover({this.posX = 0, this.posY = 0, this.direction = Direction.south});
-  // Rover({this.posX = 0, this.posY = 0, this.direction = Direction.west});
-  // Rover({this.posX = 0, this.posY = 0, this.direction = Direction.east});
 
   ///Update Rover position
   void setPositionRover({required int x, required int y}) {
