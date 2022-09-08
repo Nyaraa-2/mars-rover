@@ -22,7 +22,7 @@ void main() {
     expect(y, 5);
   });
 
-  test('Get rover position', () {
+  test('Set rover position', () {
     //* Arrange
     Grid grid = Grid();
     Rover rover = Rover();
@@ -35,5 +35,16 @@ void main() {
     //* Asset
     expect(rover.posX, 5);
     expect(rover.posY, 7);
+  });
+
+  test('Get rover position on create', () {
+    //* Arrange
+    Rover rover = Rover();
+
+    //* Act
+
+    //* Asset
+    expect(rover.posX, 0);
+    expect(rover.posY, 0);
   });
 }
