@@ -1,4 +1,5 @@
 import 'package:mars_rover/model/grid.dart';
+import 'package:mars_rover/model/obstacle.dart';
 import 'package:mars_rover/model/rover.dart';
 import 'package:test/test.dart';
 
@@ -92,5 +93,17 @@ void main() {
     expect(rover.posX, 10);
     expect(rover.posY, 0);
     expect(rover.direction, Direction.east);
+  });
+
+  test('Get obstacle position', () {
+    //* Arrange
+    Obstacle obstacle = Obstacle();
+
+    //* Act
+
+    //* Asset
+    expect(obstacle.positionX, 5);
+    expect(obstacle.positionY, 0);
+    expect(obstacle.obstacleName, ObstacleName.GrosCaillou);
   });
 }
