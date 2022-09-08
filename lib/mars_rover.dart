@@ -1,18 +1,18 @@
 import 'package:mars_rover/model/grid.dart';
 import 'model/rover.dart';
+//import 'dart:io';
 
 void main(List<String> args) {
   Rover rover = Rover();
   Grid grid = Grid();
+  int x = grid.getAbcissValue(grid, 45);
+  int y = grid.getOrdinateValue(grid, x, 2);
+  rover.setPositionRover(x: x, y: y);
 
-  rover.setPositionRover(
-      x: grid.getAbcissValue(grid, 0), y: grid.getOrdinateValue(grid, 0, 1));
-  rover.getMyPosition();
+  int z = grid.getAbcissValue(grid, 5);
+  int u = grid.getOrdinateValue(grid, z, 0);
+  rover.setPositionRover(x: z, y: u);
 
-  rover.setPositionRover(x: grid.getAbcissValue(grid, 1), y: rover.posY);
-  rover.getMyPosition();
-
-  rover.setPositionRover(
-      x: rover.posX, y: grid.getOrdinateValue(grid, rover.posX, 2));
-  rover.getMyPosition();
+  int back = grid.getAbcissValue(grid, 1);
+  rover.setPositionRover(x: back, y: rover.posY);
 }

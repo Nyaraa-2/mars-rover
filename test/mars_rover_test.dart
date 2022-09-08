@@ -1,4 +1,3 @@
-import 'package:mars_rover/mars_rover.dart';
 import 'package:mars_rover/model/grid.dart';
 import 'package:mars_rover/model/rover.dart';
 import 'package:test/test.dart';
@@ -37,7 +36,7 @@ void main() {
     expect(rover.posY, 7);
   });
 
-  test('Get rover position on create', () {
+  test('Get rover position and direction on create', () {
     //* Arrange
     Rover rover = Rover();
 
@@ -46,5 +45,6 @@ void main() {
     //* Asset
     expect(rover.posX, 0);
     expect(rover.posY, 0);
+    expect(rover.direction, Direction.north);
   });
 }

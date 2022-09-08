@@ -18,11 +18,26 @@ class Grid {
 
   ///Get X abciss value
   int getAbcissValue(Grid grid, int x) {
+    if (x > 10) {
+      while (x > 10) {
+        x = x - 10;
+      }
+    }
     return grid.coordonnees.keys.elementAt(x);
   }
 
   //Get Y ordinate value
   int getOrdinateValue(Grid grid, int x, int y) {
+    if (x > 10) {
+      while (x > 10) {
+        x = x - 10;
+      }
+    }
+    if (y > 10) {
+      while (y > 10) {
+        y = y - 10;
+      }
+    }
     return grid.coordonnees[0]!.elementAt(y);
   }
 }
