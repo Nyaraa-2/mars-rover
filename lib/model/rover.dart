@@ -48,7 +48,6 @@ class Rover {
       print("👾");
     }
     posY = y;
-    print("End y : $posY");
     getMyPosition();
   }
 

@@ -40,33 +40,41 @@ void main() {
   test('Get rover position and direction on create North', () {
     //* Arrange
     Rover rover = Rover();
-
+    Grid grid = Grid();
     //* Act
-
+    rover.setPositionRover(
+        x: grid.coordonnees.keys.elementAt(0),
+        y: grid.coordonnees[0]!.elementAt(5));
     //* Asset
     expect(rover.posX, 0);
-    expect(rover.posY, 0);
+    expect(rover.posY, 5);
     expect(rover.direction, Direction.north);
   });
 
   test('Get rover position and direction on create South', () {
     //* Arrange
     Rover rover = Rover();
-
+    rover.posY = 10;
+    Grid grid = Grid();
     //* Act
-
+    rover.setPositionRover(
+        x: grid.coordonnees.keys.elementAt(0),
+        y: grid.coordonnees[0]!.elementAt(5));
     //* Asset
     expect(rover.posX, 0);
-    expect(rover.posY, 0);
+    expect(rover.posY, 5);
     expect(rover.direction, Direction.south);
   });
 
   test('Get rover position and direction on create West', () {
     //* Arrange
     Rover rover = Rover();
-
+    rover.posX = 10;
+    Grid grid = Grid();
     //* Act
-
+    rover.setPositionRover(
+        x: grid.coordonnees.keys.elementAt(0),
+        y: grid.coordonnees[0]!.elementAt(0));
     //* Asset
     expect(rover.posX, 0);
     expect(rover.posY, 0);
@@ -76,11 +84,13 @@ void main() {
   test('Get rover position and direction on create East', () {
     //* Arrange
     Rover rover = Rover();
-
+    Grid grid = Grid();
     //* Act
-
+    rover.setPositionRover(
+        x: grid.coordonnees.keys.elementAt(10),
+        y: grid.coordonnees[0]!.elementAt(0));
     //* Asset
-    expect(rover.posX, 0);
+    expect(rover.posX, 10);
     expect(rover.posY, 0);
     expect(rover.direction, Direction.east);
   });
