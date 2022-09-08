@@ -1,7 +1,11 @@
-import 'package:mars_rover/model/rover.dart';
+import 'package:mars_rover/model/grid.dart';
+import 'model/rover.dart';
 
 void main(List<String> args) {
-//TODO : initialiser le mars rovers en coordonnée 0:0
-  Rover rover = Rover();
-//TODO : initialiser la grille en 10x10
+  Rover rover = Rover("Alexandre");
+  Grid grid = Grid();
+  rover.setPositionRover(
+      x: grid.coordonnees.keys.elementAt(0),
+      y: grid.coordonnees[0]!.elementAt(1));
+  rover.getMyPosition();
 }
