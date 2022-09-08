@@ -36,7 +36,7 @@ void main() {
     expect(rover.posY, 7);
   });
 
-  test('Get rover position and direction on create', () {
+  test('Get rover position and direction on create North', () {
     //* Arrange
     Rover rover = Rover();
 
@@ -46,5 +46,41 @@ void main() {
     expect(rover.posX, 0);
     expect(rover.posY, 0);
     expect(rover.direction, Direction.north);
+  });
+
+  test('Get rover position and direction on create South', () {
+    //* Arrange
+    Rover rover = Rover();
+
+    //* Act
+
+    //* Asset
+    expect(rover.posX, 0);
+    expect(rover.posY, 0);
+    expect(rover.direction, Direction.south);
+  });
+
+  test('Get rover position and direction on create West', () {
+    //* Arrange
+    Rover rover = Rover();
+
+    //* Act
+
+    //* Asset
+    expect(rover.posX, 0);
+    expect(rover.posY, 0);
+    expect(rover.direction, Direction.west);
+  });
+
+  test('Get rover position and direction on create East', () {
+    //* Arrange
+    Rover rover = Rover();
+
+    //* Act
+
+    //* Asset
+    expect(rover.posX, 0);
+    expect(rover.posY, 0);
+    expect(rover.direction, Direction.east);
   });
 }
